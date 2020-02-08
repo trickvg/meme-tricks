@@ -2,11 +2,6 @@ import { createGlobalStyle } from 'styled-components/macro';
 
 const GlobalStyle = createGlobalStyle`
 
-html,
-body,
-#root {
-    height: 100%;
-}
 body {
     margin: 0;
     padding: 0;
@@ -15,9 +10,9 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    color: ${props => props.theme.colors.text};
+    background: ${props => props.theme.colors.bg};
+    overflow: auto;
 }
 input[type='file'] {
     width: 0.1px;
